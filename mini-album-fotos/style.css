@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.title {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    border: 2px solid #000;
+}
+section h2{
+    color: #fff;
+    font-size: 20px;
+}
+section p{
+    color: #fff;
+    font-size: 12px;
+}
+section .slide {
+    position: relative;
+    background: #0f0;
+    height: 100%;
+    flex: 1;
+    border-right: 2px solid #000;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+section .slide:last-child {
+    border-right:none;
+}
+section .slide:hover {
+    flex-grow: 5;
+}
+
+/* Imagens */
+section .slide:nth-child(1) {
+    background: url(shaco.jpg);
+    background-position: center center;
+}
+section .slide:nth-child(2) {
+    background: url(Rammus.jpg);
+    background-position: center center;
+}
+section .slide:nth-child(3) {
+    background: url(master-yi-.jpg);
+    background-position: center center;
+}
+section .slide:nth-child(4) {
+    background: url(jax2.jpg);
+    background-position: center center;
+}
+section .slide:nth-child(5) {
+    background: url(Kindred.jpg);
+    background-position: center center;
+}
+
+/* Imagens */
+
+section .slide .content {
+    position: absolute;
+    bottom: 0;
+    margin: 40px;
+    padding: 30px;
+    background: #000;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0s;
+    transform: translateY(100px);
+}
+section .slide:hover .content {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    transform: translateY(0);
+}
